@@ -7,7 +7,7 @@ def main():
 def escolhas():
     while True:
         # Variáveis
-        caminho_banco = r'C:\Users\jotin\OneDrive\Documentos\João Gabriel\programacao\Python\dados\sql_lite\controle_de_estoque\controle_de_estoque.db'
+        caminho_banco = r'controle_de_estoque.db'
         conexao = sqlite3.connect(caminho_banco)
         conexao.execute("PRAGMA journal_mode=WAL;") # não cria o arquivo db-journal
         cursor = conexao.cursor()
