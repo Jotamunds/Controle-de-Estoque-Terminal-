@@ -6,9 +6,9 @@ def main():
 def escolhas():
     while True:
         # Variáveis
-        caminho_banco = r'C:\Users\jotin\OneDrive\Documentos\João Gabriel\programacao\Python\dados\sql_lite\controle_de_estoque\controle_de_estoque.db'
+        caminho_banco = r'controle_de_estoque.db' # Altere para o seu caminho
         conexao = sqlite3.connect(caminho_banco)
-        conexao.execute("PRAGMA journal_mode=WAL;") # não cria o arquivo db-journal
+        conexao.execute("PRAGMA journal_mode=WAL;")
         cursor = conexao.cursor()
 
         # Sistema
@@ -36,7 +36,7 @@ def mostrar_dados(cursor, conexao):
     produtos = cursor.fetchall()
 
     # Tabela
-    print(f"{'ID':<5} {'Produto':<30} {'Preço':<10}") # :<20 deixa os elementos no canto esquerdo da tela com 20 de distância
+    print(f"{'ID':<5} {'Produto':<30} {'Preço':<10}")
     print("-" * 40)
 
     # Exibir os dados
