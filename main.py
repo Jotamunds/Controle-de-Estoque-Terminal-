@@ -1,8 +1,3 @@
-# sistema de controle de estoque
-# o usuario deve fazer login - login pronto
-# caso ele seja administrador, ele poderá adicionar, alterar e excluir dados do estoque
-# caso ele seja apenas usuario, ele poderá consultar dados do estoque
-
 import admin
 import user
 from time import sleep
